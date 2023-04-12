@@ -1,6 +1,6 @@
 <template>
   <section class="h-full">
-    <HeaderComponent :activeName="true" name="Michel França"></HeaderComponent>
+    <HeaderComponent></HeaderComponent>
   </section>
 </template>
 
@@ -8,7 +8,7 @@
 import HeaderComponent from '@/components/HeaderComponent.vue';
 
 export default {
-  name: 'HomeView',
+  name: 'ShoppingView',
   components: {
     HeaderComponent
   }

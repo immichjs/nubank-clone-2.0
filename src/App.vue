@@ -1,30 +1,19 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <main class="flex justify-center h-screen p-8 relative bg-zinc-900">
+    <section class="w-96 shadow-lg rounded-3xl overflow-hidden relative bg-zinc-50">
+      <router-view />
+      <section class="flex justify-center absolute bottom-4 w-full">
+        <NavComponent></NavComponent>
+      </section>
+    </section>
+  </main>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import NavComponent from '@/components/NavComponent';
+export default {
+  components: {
+    NavComponent
+  }
 }
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>
